@@ -42,7 +42,7 @@ This app lets you do the following:
 ![Login](https://github.com/mudar-hussain/Smart_Contact_Manager/blob/main/Screenshots/Login.PNG)
 
 **Home page**<br/><br/>
-![Home page](https://github.com/mudar-hussain/Smart_Contact_Manager/blob/main/Screenshots/home-page.PNG)
+![Home page](https://github.com/mudar-hussain/Smart_Contact_Manager/blob/main/Screenshots/home.PNG)
 
 **Add contact**<br/><br/>
 ![Add contact](https://github.com/mudar-hussain/Smart_Contact_Manager/blob/main/Screenshots/add-contact.PNG)
