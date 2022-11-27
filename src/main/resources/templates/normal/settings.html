@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"  th:replace="normal/user-base::layout(~{::section})">
+<head>
+	<meta charset="UTF-8" />
+	<title>Settings</title>
+</head>
+<body>
+
+	<section>
+	
+		<div class="card mr-3 cover-screen">
+		
+			<div class="card-body">
+			
+				<h1 class="text-center">Change Password</h1>
+				
+				<div class="container-fluid">
+				
+					<div class="row">
+					
+						<div class="col-md-10 offset-md-1">
+						
+							<form action="#"
+								method="POST"
+								th:action="@{/user/change_password}"
+								class="mt-2"
+							>
+							
+							<!-- Current Password -->
+							<div class="input-group mt-3">		
+								<input required type="password" name="currentPassword" placeholder="Current password" class="form-control"/>
+							</div>
+							
+							<!-- New Password -->
+							<div class="input-group mt-3">					
+								
+								<input required type="password" name="newPassword" placeholder="New password" class="form-control"/>
+							</div>
+							
+							<!-- Confirm New Password -->
+							<div class="input-group mt-3 mb-4">					
+								
+								<input required type="password" name="confirmNewPassword" placeholder="Confirm password" class="form-control"/>
+								
+							</div>
+							
+							
+							
+							<div class="container">
+					
+					<!-- Submit Button -->
+					
+						<button type="submit" class="btn bg-primary text-white text-center btn-block">
+							Change
+						</button>
+						
+						
+						<h1 style="padding: 5px"> </h1>
+					<!-- Reset Button -->
+					
+						<button type="reset" class="btn btn-warning text-white btn-block">
+							Reset
+						</button>
+					
+					</div>
+							
+							</form>
+						
+						</div>
+					
+					</div>
+				
+				</div>
+				
+			</div>
+		
+		</div>
+	<script>
+	$(document).ready(() => {
+		$(".item").removeClass("active");
+		$("#settings").addClass("active");
+		
+	});
+	</script>
+	
+	</section>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"  th:replace="normal/user-base::layout(~{::section})">
+<head>
+	<meta charset="UTF-8" />
+	<title>User Dashboard</title>
+</head>
+<body>
+
+	<section>
+	
+		<div class="container text-center">
+		
+			<div class="card cover-screen">
+			
+				<div class="card-body">
+				
+				<img style="height: 200px; width: 200px;" class="profile-pic" src="" th:src="@{'/img/profile/' + ${user.imageUrl}}" alt="img" />
+				<h3 class="mt-3"><span th:text="${user.name}"></span></h3>
+				
+				
+					<table class="table">
+				  <thead>
+				    <tr>
+				      <th scope="col">User Id</th>
+				      <th scope="col">SCM2020 <span th:text="${user.id}"></span></th>
+				    </tr>
+				  </thead>
+				  <tbody>
+				    <tr>
+				      <th scope="row">Email</th>
+				      <td><span  th:text="${user.email}"></span></td>
+				     </tr>
+				     
+				    <tr>
+				      <th scope="row">Role</th>
+				      <td><span  th:text="${user.role}"></span></td>
+				     </tr>
+				    <tr>
+				      <th scope="row">Account Active</th>
+				      <td><span  th:text="${user.enabled}"></span></td>
+				     </tr>
+				     <tr>
+				      <th scope="row">About</th>
+				      <td><span  th:text="${user.about}"></span></td>
+				     </tr>
+				  </tbody>
+				</table>
+				
+				</div>
+			
+			</div>
+		
+		</div>
+	<script>
+	$(document).ready(() => {
+		$(".item").removeClass("active");
+		$("#profile").addClass("active");
+		
+	});
+	</script>
+	
+	</section>
+</body>
+</html>
